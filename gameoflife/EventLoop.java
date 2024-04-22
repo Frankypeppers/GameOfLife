@@ -1,35 +1,29 @@
 package gameoflife;
 
+public class EventLoop {
+    State state = new State();
+    UI ui = new UI();
+    int row, col;
 
-/**
- * Write a description of class EventLoop here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class EventLoop
-{
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class EventLoop
-     */
-    public EventLoop()
-    {
-        // initialise instance variables
-        x = 0;
+    public static void main(String[] args) {
+        EventLoop eventLoop = new EventLoop();
+        eventLoop.run();
     }
 
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    public void run() {
+        while (state.getGameState() != Constants.QUIT_PROGRAM) {
+            int gameState = state.getGameState();
+            if (gameState == Constants.STANDBY) {
+                state.setGameState(Constants.GET_GRID_SEEDS);
+                for (int i = 0; i <= 19; i++) {
+                    for (int j = 0; j <= 19; j++) {
+                        state.setBoardCell(i, j, 0);
+                    }
+                }
+            } else if (gameState == Constants.GET_GRID_SEEDS) {
+
+            }
+        }
     }
 }
+/// mistook eventloop for state lmao ----- finish laterrr
