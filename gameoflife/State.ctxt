@@ -1,3 +1,15 @@
 #BlueJ class context
 comment0.target=State
-numComments=1
+comment1.params=
+comment1.target=boolean\ isFinished()
+comment2.params=
+comment2.target=int\ getGameState()
+comment3.params=gameState
+comment3.target=void\ setGameState(int)
+comment4.params=
+comment4.target=int\ getGenerations()
+comment5.params=row\ col\ value
+comment5.target=int\ getBoardSeed(int,\ int,\ int)
+comment6.params=row\ col\ value
+comment6.target=void\ setBoardSeed(int,\ int,\ int)
+numComments=7

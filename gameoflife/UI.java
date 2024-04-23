@@ -1,35 +1,26 @@
 package gameoflife;
 
+import java.util.Scanner;
+import java.util.*;
 
-/**
- * Write a description of class UI here.
- *
- * @author (your name)
- * @version (a version number or a date)
- */
-public class UI
-{
-    // instance variables - replace the example below with your own
-    private int x;
-
-    /**
-     * Constructor for objects of class UI
-     */
-    public UI()
-    {
-        // initialise instance variables
-        x = 0;
+public class UI {
+    
+    Scanner scanner;
+    
+    public UI() {
+        scanner = new Scanner(System.in);
     }
-
-    /**
-     * An example of a method - replace this comment with your own
-     *
-     * @param  y  a sample parameter for a method
-     * @return    the sum of x and y
-     */
-    public int sampleMethod(int y)
-    {
-        // put your code here
-        return x + y;
+    
+    public boolean isLegalSeed(State state, int row, int col) {
+        return 1 <= row &&row <= Constants.GRID_SIZE && 
+        1 <= col && col <= Constants.GRID_SIZE &&
+        state.getBoardSeed(row-1, col-1) == Constants.UNPOPULATED;
+    }
+    
+    public int getSeedRow() {
+        int row = 0;
+        while (true) {
+            
+        }
     }
 }
