@@ -25,11 +25,11 @@ public class State {
         return generations;
     }
     
-    public int getBoardSeed (int row, int col) {
+    public int getBoardCell (int row, int col) {
         return this.board[row][col];
     }
     
-    public void setBoardSeed (int row, int col, int value) {
+    public void setBoardCell (int row, int col, int value) {
         this.board[row][col] = value;
     }
 }

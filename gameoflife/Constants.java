@@ -21,10 +21,10 @@ public class Constants
     public static final int QUIT_PROGRAM = 7;
     
     // Strings                                  //ref tictactoe
-    public static final String DIVIDER_STRING = " |---|---|---| ";
+    public static final String DIVIDER_STRING = " |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---| ";
     public static final String BOARD_STRING = " | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | ";
-    public static final String GET_SEEDS_X = "What row do you want to seed?";
-    public static final String GET_SEEDS_Y = "What column do you want to seed?";
+    public static final String GET_SEEDS_X = "What row do you want to seed? ";
+    public static final String GET_SEEDS_Y = "What column do you want to seed? ";
     public static final String INVALID_SEED_XY = "Your row or column must be 1-20";
     public static final String INVALID_SEED = "You cannot seed row %d column %d. Try again";
     public static final String SEED_DONE = "Are you done seeding? Y/N";
