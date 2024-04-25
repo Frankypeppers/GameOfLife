@@ -65,6 +65,12 @@ public class UI {
         String yesOrNo = scanner.next();
         return yesOrNo.equals("Y") || yesOrNo.equals("y");
     }
+    
+    public boolean seedContinue() {
+        System.out.println(Constants.SEED_CONTINUE);
+        String yesOrNo = scanner.next();
+        return yesOrNo.equals("Y") || yesOrNo.equals("y");
+    }
 
     public void printBoard(State state) {
         System.out.println(Constants.DIVIDER_STRING);

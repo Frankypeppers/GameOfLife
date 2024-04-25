@@ -4,6 +4,9 @@ public class State {
     private int generations = -1;
     private int gameState = Constants.STANDBY;
     private int[][] board = new int[Constants.GRID_SIZE][Constants.GRID_SIZE];
+    
+    int xSeed = 0;
+    int ySeed = 0;
 
     public boolean isFinished() {
         if (generations == 0) {
@@ -11,6 +14,14 @@ public class State {
         } else {
             return false;
         }
+    }
+    
+    public int getXSeed() {
+        return xSeed;
+    }
+    
+    public int getYSeed() {
+        return ySeed;
     }
     
     public int getGameState() {

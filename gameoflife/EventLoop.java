@@ -21,7 +21,22 @@ public class EventLoop {
                     }
                 }
             } else if (gameState == Constants.GET_GRID_SEEDS) {
+                ui.printBoard(state);
+                row = ui.getSeedRow();
+                col = ui.getSeedCol();
+                if (ui.isLegalSeed(state, row, col)) {
+                    state.setGameState(Constants.SEED_GRID);
+                } else {
+                    ui.printInvalidRowOrColumn();
+                }
                 
+            } else if (gameState == Constants.SEED_GRID) {
+                state.setBoardCell(row-1, col-1, 1);
+                if (ui.seedContinue()) {
+                    state.setGameState(Constants.GET_GRID_SEEDS);
+                } else {
+                    state.setGameState(Constants.GET_GENERATION_NUMBER);
+                }
             }
         }
     }

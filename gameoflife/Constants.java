@@ -13,12 +13,13 @@ public class Constants
     //sim states
     public static final int STANDBY = 0;
     public static final int GET_GRID_SEEDS = 1;
-    public static final int GET_GENERATION_NUMBER = 2;
-    public static final int GENERATE = 3;
-    public static final int CHECK_GENERATIONS = 4;
-    public static final int SIM_END = 5;
-    public static final int RESEED = 6;                 //run out of gens -> quit = no -> reseed
-    public static final int QUIT_PROGRAM = 7;
+    public static final int SEED_GRID = 2;
+    public static final int GET_GENERATION_NUMBER = 3;
+    public static final int GENERATE = 4;
+    public static final int CHECK_GENERATIONS = 5;
+    public static final int SIM_END = 6;
+    public static final int RESEED = 7;                 //run out of gens -> quit = no -> reseed
+    public static final int QUIT_PROGRAM = 8;
     
     // Strings                                  //ref tictactoe
     public static final String DIVIDER_STRING = " |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---| ";
@@ -32,5 +33,6 @@ public class Constants
     public static final String GENERATE_FINISH = "Generations finished";
     public static final String QUIT_ASK = "Would you like to quit?";
     public static final String RESEED_ASK = "Would you like to reseed?";
+    public static final String SEED_CONTINUE = "Would you like to continue seeding? Y/N ";
     public static final String FINISH = "Thanks for playing!";
 }
