@@ -33,7 +33,11 @@ public class State {
     }
     
     public int getGenerations() {
-        return generations;
+        return this.generations;
+    }
+    
+    public void setGenerations(int generations) {
+        this.generations = generations;
     }
     
     public int getBoardCell (int row, int col) {

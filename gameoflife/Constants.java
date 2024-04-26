@@ -9,6 +9,7 @@ public class Constants
     //valid box values
     public static final int POPULATED = 1;      // Indicates whether a box is populated
     public static final int UNPOPULATED = -1;   // Indicated whether a box is unpopulated
+    public static final int MAX_GENS = 100;
     
     //sim states
     public static final int STANDBY = 0;
@@ -31,6 +32,7 @@ public class Constants
     public static final String SEED_DONE = "Are you done seeding? Y/N";
     public static final String GET_GENERATIONS = "How many generations do you want to run?";
     public static final String GENERATE_FINISH = "Generations finished";
+    public static final String MAXMIN_GENS = "Too many/litte generations. Please enter 1-100";
     public static final String QUIT_ASK = "Would you like to quit?";
     public static final String RESEED_ASK = "Would you like to reseed?";
     public static final String SEED_CONTINUE = "Would you like to continue seeding? Y/N ";

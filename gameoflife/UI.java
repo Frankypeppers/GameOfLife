@@ -17,6 +17,26 @@ public class UI {
         state.getBoardCell(row-1, col-1) == Constants.UNPOPULATED;
     }
     
+    public int getGenerations() {
+        int generations = 0;
+        while (true) {
+            System.out.printf(Constants.GET_GENERATIONS);
+            try {
+                generations = scanner.nextInt();
+                if (generations < 1 || generations > Constants.MAX_GENS) {
+                    printInvalidGens();
+                    System.out.println();
+                    scanner.nextLine();
+                } else {
+                    return generations;
+                }
+            } catch (InputMismatchException error) {
+                printInvalidGens();
+                System.out.println();
+                scanner.next();
+            }
+        }
+    }
     
     public int getSeedRow() {
         int row = 0;
@@ -58,6 +78,10 @@ public class UI {
                 scanner.next();
             }
         }
+    }
+    
+    public void printInvalidGens() {
+        System.out.printf(Constants.MAXMIN_GENS);
     }
 
     public boolean reSeed() {
