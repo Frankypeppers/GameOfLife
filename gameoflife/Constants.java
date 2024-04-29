@@ -1,9 +1,10 @@
 //setup referenced from teacher constants
+//similar organization
+
 package gameoflife;
 
 public class Constants
 {
-    //grid size - make bigger maybe(?)
     public static final int GRID_SIZE = 20;
     
     //valid box values
@@ -23,8 +24,8 @@ public class Constants
     public static final int RESEED = 8;                 //run out of gens -> quit = no -> reseed
     public static final int QUIT_PROGRAM = 9;
     
-    // Strings                                  //ref tictactoe --- 
-                        ///div. & board str created by teacher originally - altered by me
+    // Strings     //This code was provided as starter code by my teacher.
+    
     public static final String DIVIDER_STRING = " |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---| ";
     public static final String BOARD_STRING = " | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | ";
     public static final String GET_SEEDS_X = "What row do you want to seed? ";

@@ -3,8 +3,9 @@ package gameoflife;
 import java.util.Scanner;
 import java.util.*;
 
-//code referenced from my teacher for a tictactoe program -- retains similar setup
-// altered in a way thats unique for my program
+//This code was provided as starter code by my teacher.
+//nearly all of it has been made unique to my program
+
 public class UI {
 
     Scanner scanner;
@@ -16,7 +17,7 @@ public class UI {
     public boolean isLegalSeed(State state, int row, int col) {
         return 1 <= row &&row <= Constants.GRID_SIZE && 1 <= col && col <= Constants.GRID_SIZE && state.getBoardCell(row-1, col-1) == 0;
     }
-    
+
     public String getPopOrUnpop(int population) {
         if (population == 1) {
             return "\u25A0";
@@ -45,7 +46,7 @@ public class UI {
             }
         }
     }
-    
+
     public int getSeedRow(int population) {
         int row = 0;
         while (true) {
@@ -87,7 +88,7 @@ public class UI {
             }
         }
     }
-    
+
     public void printInvalidGens() {
         System.out.printf(Constants.MAXMIN_GENS);
     }
@@ -97,7 +98,7 @@ public class UI {
         String yesOrNo = scanner.next();
         return yesOrNo.equals("Y") || yesOrNo.equals("y");
     }
-    
+
     public boolean seedContinue() {
         System.out.println(Constants.SEED_CONTINUE);
         String yesOrNo = scanner.next();
@@ -108,16 +109,16 @@ public class UI {
         System.out.println(Constants.DIVIDER_STRING);
         for (int row = 0; row < Constants.GRID_SIZE; row++) {
             System.out.printf(Constants.BOARD_STRING,getPopOrUnpop(state.getBoardCell(row, 0)),
-            getPopOrUnpop(state.getBoardCell(row, 1)),getPopOrUnpop(state.getBoardCell(row, 2)),
-            getPopOrUnpop(state.getBoardCell(row, 3)),getPopOrUnpop(state.getBoardCell(row, 4)), 
-            getPopOrUnpop(state.getBoardCell(row, 5)),getPopOrUnpop(state.getBoardCell(row, 6)),
-            getPopOrUnpop(state.getBoardCell(row, 7)),getPopOrUnpop(state.getBoardCell(row, 8)),
-            getPopOrUnpop(state.getBoardCell(row, 9)),getPopOrUnpop(state.getBoardCell(row, 10)),
-            getPopOrUnpop(state.getBoardCell(row, 11)),getPopOrUnpop(state.getBoardCell(row, 12)),
-            getPopOrUnpop(state.getBoardCell(row, 13)),getPopOrUnpop(state.getBoardCell(row, 14)),
-            getPopOrUnpop(state.getBoardCell(row, 15)),getPopOrUnpop(state.getBoardCell(row, 16)),
-            getPopOrUnpop(state.getBoardCell(row, 17)),getPopOrUnpop(state.getBoardCell(row, 18)),
-            getPopOrUnpop(state.getBoardCell(row, 19)));
+                getPopOrUnpop(state.getBoardCell(row, 1)),getPopOrUnpop(state.getBoardCell(row, 2)),
+                getPopOrUnpop(state.getBoardCell(row, 3)),getPopOrUnpop(state.getBoardCell(row, 4)), 
+                getPopOrUnpop(state.getBoardCell(row, 5)),getPopOrUnpop(state.getBoardCell(row, 6)),
+                getPopOrUnpop(state.getBoardCell(row, 7)),getPopOrUnpop(state.getBoardCell(row, 8)),
+                getPopOrUnpop(state.getBoardCell(row, 9)),getPopOrUnpop(state.getBoardCell(row, 10)),
+                getPopOrUnpop(state.getBoardCell(row, 11)),getPopOrUnpop(state.getBoardCell(row, 12)),
+                getPopOrUnpop(state.getBoardCell(row, 13)),getPopOrUnpop(state.getBoardCell(row, 14)),
+                getPopOrUnpop(state.getBoardCell(row, 15)),getPopOrUnpop(state.getBoardCell(row, 16)),
+                getPopOrUnpop(state.getBoardCell(row, 17)),getPopOrUnpop(state.getBoardCell(row, 18)),
+                getPopOrUnpop(state.getBoardCell(row, 19)));
             System.out.println();
             System.out.println(Constants.DIVIDER_STRING);
         }

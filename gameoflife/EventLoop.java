@@ -1,6 +1,7 @@
 package gameoflife;
-/// code originally written by teacher -- altered by me for my program
-/// procedure for the run retains similar setup to how he created it
+//This code was provided as starter code by my teacher.
+//altered to be unique to my program
+
 public class EventLoop {
     State state = new State();
     UI ui = new UI();
@@ -19,7 +20,7 @@ public class EventLoop {
                 state.setGameState(Constants.GET_GRID_SEEDS);
                 for (int i = 0; i <= 19; i++) {
                     for (int j = 0; j <= 19; j++) {
-                        state.setBoardCell(i, j, 0); //// check later
+                        state.setBoardCell(i, j, 0);
                     }
                 }
             } else if (gameState == Constants.GET_GRID_SEEDS) {
