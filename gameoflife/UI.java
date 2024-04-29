@@ -71,7 +71,7 @@ public class UI {
     public int getSeedCol(int population) {
         int col = 0;
         while (true) {
-            System.out.printf(Constants.GET_SEEDS_X);
+            System.out.printf(Constants.GET_SEEDS_Y);
             try {
                 col = scanner.nextInt();
                 if (col <1 || col > Constants.GRID_SIZE) {

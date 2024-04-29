@@ -33,7 +33,7 @@ public class Constants
     public static final String INVALID_SEED_XY = "Your row or column must be 1-20";
     public static final String INVALID_SEED = "You cannot seed row %d column %d. Try again";
     public static final String SEED_DONE = "Are you done seeding? Y/N";
-    public static final String GET_GENERATIONS = "How many generations do you want to run?";
+    public static final String GET_GENERATIONS = "How many generations do you want to run?" ;
     public static final String GENERATE_FINISH = "Generations finished";
     public static final String MAXMIN_GENS = "Too many/litte generations. Please enter 1-100";
     public static final String QUIT_ASK = "Would you like to quit?";

@@ -38,7 +38,9 @@ public class EventLoop {
                 state.setBoardCell(row-1, col-1, state.getPopulation());
                 if (ui.seedContinue()) {
                     state.setGameState(Constants.GET_GRID_SEEDS);
-                } 
+                } else {
+                    state.setGameState(Constants.GET_GENERATION_NUMBER);
+                }
             } else if (gameState == Constants.GET_GENERATION_NUMBER) {
                 ui.printBoard(state);
                 generations = ui.getGenerations();
