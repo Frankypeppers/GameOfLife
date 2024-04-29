@@ -1,5 +1,6 @@
 package gameoflife;
-
+/// code originally written by teacher -- altered by me for my program
+/// procedure for the run retains similar setup to how he created it
 public class EventLoop {
     State state = new State();
     UI ui = new UI();
@@ -22,9 +23,10 @@ public class EventLoop {
                     }
                 }
             } else if (gameState == Constants.GET_GRID_SEEDS) {
+                System.out.print('\u000C');
                 ui.printBoard(state);
-                row = ui.getSeedRow();
-                col = ui.getSeedCol();
+                row = ui.getSeedRow(state.getPopulation());
+                col = ui.getSeedCol(state.getPopulation());
                 if (ui.isLegalSeed(state, row, col)) {
                     state.setGameState(Constants.SEED_GRID);
                 } else {
@@ -32,14 +34,12 @@ public class EventLoop {
                 }
                 
             } else if (gameState == Constants.SEED_GRID) {
-                state.setBoardCell(row-1, col-1, 1);
+                state.setBoardCell(row-1, col-1, state.getPopulation());
                 if (ui.seedContinue()) {
                     state.setGameState(Constants.GET_GRID_SEEDS);
-                } else {
-                    System.out.print('\u000C');
-                    state.setGameState(Constants.GET_GENERATION_NUMBER);
-                }
+                } 
             } else if (gameState == Constants.GET_GENERATION_NUMBER) {
+                ui.printBoard(state);
                 generations = ui.getGenerations();
                 return;
             }

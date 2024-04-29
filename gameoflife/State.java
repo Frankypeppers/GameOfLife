@@ -3,6 +3,7 @@ package gameoflife;
 public class State {
     private int generations = -1;
     private int gameState = Constants.STANDBY;
+    private int population = Constants.POPULATED;
     private int[][] board = new int[Constants.GRID_SIZE][Constants.GRID_SIZE];
     
     int xSeed = 0;
@@ -24,6 +25,14 @@ public class State {
         return ySeed;
     }
     
+    public int getPopulation() {
+        return population;
+    }
+    
+    public void setPopulation(int population) {
+        this.population = population;
+    }
+
     public int getGameState() {
         return this.gameState;
     }
@@ -39,6 +48,8 @@ public class State {
     public void setGenerations(int generations) {
         this.generations = generations;
     }
+    
+    // BoardCell parts originally written by my teacher for tictactoe program
     
     public int getBoardCell (int row, int col) {
         return this.board[row][col];

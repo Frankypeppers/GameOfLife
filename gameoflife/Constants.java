@@ -1,4 +1,4 @@
-//referenced from teacher constants
+//setup referenced from teacher constants
 package gameoflife;
 
 public class Constants
@@ -15,14 +15,16 @@ public class Constants
     public static final int STANDBY = 0;
     public static final int GET_GRID_SEEDS = 1;
     public static final int SEED_GRID = 2;
-    public static final int GET_GENERATION_NUMBER = 3;
-    public static final int GENERATE = 4;
-    public static final int CHECK_GENERATIONS = 5;
-    public static final int SIM_END = 6;
-    public static final int RESEED = 7;                 //run out of gens -> quit = no -> reseed
-    public static final int QUIT_PROGRAM = 8;
+    public static final int CONT_SEED_ASK = 3;
+    public static final int GET_GENERATION_NUMBER = 4;
+    public static final int GENERATE = 5;
+    public static final int CHECK_GENERATIONS = 6;
+    public static final int SIM_END = 7;
+    public static final int RESEED = 8;                 //run out of gens -> quit = no -> reseed
+    public static final int QUIT_PROGRAM = 9;
     
-    // Strings                                  //ref tictactoe
+    // Strings                                  //ref tictactoe --- 
+                        ///div. & board str created by teacher originally - altered by me
     public static final String DIVIDER_STRING = " |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---| ";
     public static final String BOARD_STRING = " | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | %s | ";
     public static final String GET_SEEDS_X = "What row do you want to seed? ";
